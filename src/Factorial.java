@@ -1,11 +1,16 @@
+import java.util.*;
 public class Factorial {
 
-    // TODO: Create a method 'public static long factorial(int n)'
-    // It should return the factorial of n.
+    public static long factorial(int n){
+        if(n==0) return 1;
+        return n*factorial(n-1);
+    }
 
-    
-        // TODO: Read input n
-        // TODO: Call factorial(n)
-        // TODO: Print the result
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        long ans = factorial(n);
+        System.out.println(ans);
+    }
     
 }
